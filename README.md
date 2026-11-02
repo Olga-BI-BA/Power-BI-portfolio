@@ -19,7 +19,7 @@ Welcome to my interactive data visualization and business intelligence portfolio
 ### 3. ☕ Sunrise Coffee Commercial Performance Review (2023–2024)
 * **Objective:** Find where store profit leaks across a 60-store chain and build a costed 2025 plan. Result: a plan worth about £1.76M a year, lifting net margin from 18.8% to 22.7%.
 * **Tech Stack:** Power BI (PBIP), DAX, Star Schema, Field Parameters, Drill-through.
-* **Key Visuals:** [Overview Preview](projects/sunrise-coffee-performance/screenshots/01-sunrise-coffee-overview.png) | [Project Details](projects/sunrise-coffee-performance/README.md)
+* **Key Visuals:** [Cover Preview](projects/sunrise-coffee-performance/screenshots/00-sunrise-coffee-cover.png) | [All Screenshots](projects/sunrise-coffee-performance/screenshots/) | [Project Details](projects/sunrise-coffee-performance/README.md)
 
 ---
 
