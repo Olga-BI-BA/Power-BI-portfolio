@@ -10,7 +10,7 @@
 The group's leadership: CEO, CFO and the board who approve the capital budget.
 
 ## Problem
-30 of the group's 165 hotels carry the Maison d'Or brand. They bring in a third of group revenue and 36% of its profit. Profit fell for the first time since 2021, and leadership does not see why or where to invest.
+Leadership asked for a performance review of the Maison d’Or network: what is happening to it today, and where should we invest?
 
 ## Task
 Explain what is happening to the brand and turn it into an investment decision: which projects to fund, how much, and when the money comes back.
