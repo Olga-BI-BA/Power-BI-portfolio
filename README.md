@@ -21,6 +21,32 @@ Welcome to my interactive data visualization and business intelligence portfolio
 * **Tech Stack:** Power BI (PBIP), DAX, Star Schema, Field Parameters, Drill-through.
 * **Key Visuals:** [Cover Preview](projects/sunrise-coffee-performance/screenshots/00-sunrise-coffee-cover.png) | [All Screenshots](projects/sunrise-coffee-performance/screenshots/) | [Project Details](projects/sunrise-coffee-performance/README.md)
 
+### 4. 🏨 Maison d'Or Hotel Investment Plan
+<table>
+<tr>
+<td width="45%" valign="top">
+<a href="https://olga-bi-ba.github.io/Power-BI-portfolio/projects/maison-dor-investment-plan/"><img src="projects/maison-dor-investment-plan/cover.png" alt="Maison d'Or report cover" width="100%"></a>
+</td>
+<td valign="top">
+
+*Power BI DataViz World Championships 2027, Round 1*
+
+**Audience.** CEO, CFO and the board of a luxury hotel group.
+
+**Problem.** The most profitable brand (30 hotels, 36% of profit) saw profit fall for the first time since 2021.
+
+**Task.** Find why and turn it into an investment decision: what to fund, how much, when it pays back.
+
+**Result.** Two-page report: the network today and an interactive $155.6M plan that pays back in 2035.
+
+**Tags:** `Power BI` `DAX` `Deneb` `Galaxy schema` `Scenario analysis`
+
+[▶ Interactive report](https://olga-bi-ba.github.io/Power-BI-portfolio/projects/maison-dor-investment-plan/) | [Project details](projects/maison-dor-investment-plan/README.md)
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🛠️ Core Competencies & Tech Stack
