@@ -17,35 +17,22 @@ Welcome to my interactive data visualization and business intelligence portfolio
 * **Key Visuals:** [Project Folder](projects/workforce-analytics/)
 
 ### 3. ☕ Sunrise Coffee Commercial Performance Review (2023–2024)
+<a href="projects/sunrise-coffee-performance/README.md"><img src="projects/sunrise-coffee-performance/screenshots/00-sunrise-coffee-cover.png" alt="Sunrise Coffee report cover" width="45%" align="left"></a>
+
 * **Objective:** Find where store profit leaks across a 60-store chain and build a costed 2025 plan. Result: a plan worth about £1.76M a year, lifting net margin from 18.8% to 22.7%.
 * **Tech Stack:** Power BI (PBIP), DAX, Star Schema, Field Parameters, Drill-through.
 * **Key Visuals:** [Cover Preview](projects/sunrise-coffee-performance/screenshots/00-sunrise-coffee-cover.png) | [All Screenshots](projects/sunrise-coffee-performance/screenshots/) | [Project Details](projects/sunrise-coffee-performance/README.md)
 
+<br clear="left">
+
 ### 4. 🏨 Maison d'Or Hotel Investment Plan
-<table>
-<tr>
-<td width="45%" valign="top">
-<a href="https://olga-bi-ba.github.io/Power-BI-portfolio/projects/maison-dor-investment-plan/"><img src="projects/maison-dor-investment-plan/cover.png" alt="Maison d'Or report cover" width="100%"></a>
-</td>
-<td valign="top">
+<a href="https://olga-bi-ba.github.io/Power-BI-portfolio/projects/maison-dor-investment-plan/"><img src="projects/maison-dor-investment-plan/cover.png" alt="Maison d'Or report cover" width="45%" align="left"></a>
 
-*Power BI DataViz World Championships 2027, Round 1*
+* **Objective:** Find why the most profitable brand of a luxury hotel group (30 hotels, 36% of profit) saw profit fall, and build a costed investment plan for the CEO, CFO and board. Result: a $155.6M plan in six projects that adds $28M profit a year and pays back in 2035.
+* **Tech Stack:** Power BI (PBIP), DAX, Galaxy Schema, Deneb (Vega-Lite), Scenario Analysis.
+* **Key Visuals:** [▶ Interactive Report](https://olga-bi-ba.github.io/Power-BI-portfolio/projects/maison-dor-investment-plan/) | [Cover Preview](projects/maison-dor-investment-plan/cover.png) | [Project Details](projects/maison-dor-investment-plan/README.md)
 
-**Audience.** CEO, CFO and the board of a luxury hotel group.
-
-**Problem.** The most profitable brand (30 hotels, 36% of profit) saw profit fall for the first time since 2021.
-
-**Task.** Find why and turn it into an investment decision: what to fund, how much, when it pays back.
-
-**Result.** Two-page report: the network today and an interactive $155.6M plan that pays back in 2035.
-
-**Tags:** `Power BI` `DAX` `Deneb` `Galaxy schema` `Scenario analysis`
-
-[▶ Interactive report](https://olga-bi-ba.github.io/Power-BI-portfolio/projects/maison-dor-investment-plan/) | [Project details](projects/maison-dor-investment-plan/README.md)
-
-</td>
-</tr>
-</table>
+<br clear="left">
 
 ---
 
