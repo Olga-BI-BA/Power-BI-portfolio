@@ -17,9 +17,15 @@ Welcome to my interactive data visualization and business intelligence portfolio
 <br clear="left">
 
 ### 2. 🛍️ Contoso Sales Performance Analysis
-* **Objective:** Identify revenue leakages and optimize product mix across retail channels.
-* **Tech Stack:** Power BI, DAX, Power Query, Star Schema.
-* **Key Visuals:** [Overview Preview](assets/previews/contoso-overview.png) | [Deep Dive Walkthrough](projects/contoso-sales/README.md)
+<a href="projects/contoso-sales/README.md"><img src="projects/contoso-sales/screenshots/03-products.gif" alt="Contoso Sales report: Products page" width="45%" align="left"></a>
+
+* **Objective:** Find where global revenue is lost and where it still grows, and decide what to do with the product range. The report covers five pages for executives and regional managers: overview, regional trends, product analysis (BCG and ABC-XYZ), a discount scenario simulator and a daily cockpit.
+
+* **Tech Stack:** Power BI (PBIX), SQL, Power Query, DAX, Star Schema, Field Parameters, What-If Parameters, Dynamic RLS.
+
+* **Key Visuals:** [Project Details](projects/contoso-sales/README.md)
+
+<br clear="left">
 
 ### 3.  👥 Workforce Analytics (HR): Attendance & Schedule Compliance
 <a href="https://olga-bi-ba.github.io/Power-BI-portfolio/projects/workforce-analytics/report.html"><img src="projects/workforce-analytics/screenshots/00-wf-cover.png" alt="Workforce Analytics report cover" width="45%" align="left"></a>
@@ -57,7 +63,9 @@ Welcome to my interactive data visualization and business intelligence portfolio
 
 ## 🛠️ Core Competencies & Tech Stack
 * **Data Modeling:** Star Schemas, Snowflake Schemas Galaxy, Fact/Dimension relationships.
+* **SQL:** Writing SQL queries to provide data for analysis.
 * **DAX & Power Query:** Complex Measures, Time Intelligence.
+* **AI-Assisted Analytics and BI Report Development:** Claude Code to speed up report building, DAX and documentation, with every result reviewed and validated by me.
 * **UX/UI for BI:** Designing clean, user-friendly layouts based on visual hierarchy.
 
 ---
