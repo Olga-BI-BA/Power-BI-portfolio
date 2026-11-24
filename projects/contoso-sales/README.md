@@ -1,14 +1,16 @@
 # Contoso Sales Performance Report 📊
 
-An interactive, enterprise-grade Power BI dashboard designed to monitor key performance indicators (KPIs), product and regional efficiency.
+An enterprise-grade Power BI report designed to monitor key performance indicators (KPIs), product and regional efficiency.
 
 > **Project Status:** Completed 🚀  
 > **Tech Stack:** Power BI Desktop, SQL, Power Query (M Language), DAX, Figma, Git LFS.
 
+**Note on the data:** Contoso is a synthetic dataset. It is well suited for demonstrating modelling, DAX and dashboard design, but it may not reflect realistic business patterns. The findings below illustrate the analytical approach.
+
 ## 📑 Contents
 
 - [Business Question](#-business-question-new)
-- [Report Screenshots](#-report-screenshots)
+- [Report Screenshots & Insights](#-report-screenshots)
   - [1. Global Sales Overview](#1-main-page-global-sales-overview)
   - [2. Regional Trends](#2-regional-trends-page)
   - [3. Products. What Sells](#3-products-what-sells)
@@ -21,9 +23,7 @@ An interactive, enterprise-grade Power BI dashboard designed to monitor key perf
 
 
   
-> **Note on the data:** Contoso is a synthetic dataset. It is well suited for demonstrating modelling, DAX and dashboard design, but it may not reflect realistic business patterns. The findings below illustrate the analytical approach.
-
-## 🎯 Business Question *(new)*
+## 🎯 Business Question 
 
 **Role:** BI analyst preparing a performance review for the CEO, CFO, Commercial Director and regional managers.
 
@@ -36,7 +36,7 @@ An interactive, enterprise-grade Power BI dashboard designed to monitor key perf
 
 A fifth page, the **Daily Cockpit**, supports day-to-day management: is the month on track against its forecast?
 
-## 📷 Report Screenshots
+## 📷 Report Screenshots and Insights
 
 ### 1. Main Page: Global Sales Overview
 This page serves as the summary of short-term trends for executive management, offering a high-level performance overview across all global markets, sales channels, and product categories.
@@ -116,7 +116,7 @@ This page provides a comprehensive analysis of product performance, sales distri
 ### 4. Scenario Analysis Page
 The Scenario Analysis is a financial simulation model to evaluate KPIs for the following business goal: increase of global market share via implementation of a new discount policy.  
 
-**Data Methodology Note**:
+**Data methodology note**:
 *Because this portfolio project utilizes a synthetic dataset, it lacks the behavioral patterns and granular transaction history required to statistically calculate a true price elasticity coefficient (the exact relationship between discount depth and demand growth). Consequently, the dashboard is designed as a deterministic simulation tool. It allows stakeholders to manually input their own strategic assumptions or market expectations regarding demand elasticity to instantly visualize the potential financial outcomes.*
 
 
@@ -141,7 +141,7 @@ The Daily Cockpit serves as an operational executive command center designed for
 
 ---
 
-## 🕹️ Interactivity *(new)*
+## 🕹️ Interactivity 
 
 - Cross-filtering between visuals on every page.
 - Field-parameter switches for metric (net revenue, gross profit, active SKUs, YoY growth), view (channel or macro region) and level (category or country).
@@ -152,7 +152,7 @@ The Daily Cockpit serves as an operational executive command center designed for
 
 ---
 
-## 🧱 Data Model and DAX *(new)*
+## 🧱 Data Model and DAX 
 
 - **Data preparation (SQL):** the data was prepared with SQL queries before it was loaded into Power BI.
 - **Dynamic row-level security (RLS):** access is restricted by region and store, based on the signed-in user's email (`Security_Region_RLS`, `Security_Store_RLS`).
@@ -173,14 +173,14 @@ The Daily Cockpit serves as an operational executive command center designed for
 
 ---
 
-## ⚠️ Data Limitations *(new)*
+## ⚠️ Data Limitations 
 
 - The dataset is **synthetic**. It does not contain the behaviour needed to estimate a real price elasticity, so the Scenarios page is a deterministic simulation (see the methodology note above).
 - Findings describe 2025 against 2024 unless a page says otherwise. Screenshots with another year selected show different percentages.
 
 ---
 
-## 🗂️ Files *(new)*
+## 🗂️ Files 
 
 | Path | Content |
 |---|---|
