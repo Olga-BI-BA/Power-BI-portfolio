@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workforce Analytics: live report</title>
+<meta name="description" content="Interactive Power BI report: Workforce Analytics, attendance and schedule compliance from clock-in / clock-out data.">
+<style>
+  :root{
+    --bg:#eef0f3; --ink:#181a1e; --muted:#6e727a; --card:#ffffff; --line:#dfe2e7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14161a; --ink:#f2f3f5; --muted:#9aa0a8; --card:#1d2025; --line:#2b2f36; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:1440px;margin:0 auto;padding:32px 16px 48px}
+  .back{display:inline-block;font-size:14px;color:var(--muted);text-decoration:none;margin-bottom:20px}
+  .back:hover{color:var(--ink)}
+  h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 8px;font-weight:600;letter-spacing:-.01em}
+  .sub{margin:0 0 24px;color:var(--muted);font-size:clamp(15px,2vw,18px)}
+  .frame{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+  .ratio{position:relative;width:100%;aspect-ratio:1280/770;min-height:420px;border-radius:10px;overflow:hidden;background:var(--bg)}
+  .ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .links{display:flex;flex-wrap:wrap;gap:12px 20px;margin:20px 0 0;font-size:15px}
+  .links a{color:var(--ink);text-underline-offset:3px}
+  .note{margin:24px 0 0;font-size:14px;color:var(--muted)}
+  @media (max-width:600px){ .ratio{aspect-ratio:3/4} }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="./README.md">&larr; Back to case study</a>
+  <h1>Workforce Analytics</h1>
+  <p class="sub">Attendance &amp; schedule compliance · Power BI report · Presented by Olga Sasinovich</p>
+
+  <div class="frame">
+    <div class="ratio">
+      <iframe
+        title="workforce-analytics v 2.0 EN"
+        src="https://app.powerbi.com/view?r=eyJrIjoiNWU1YTFlMjgtOTYzZS00NDQ5LWE4NDgtZjkxMmI2YTkxODM4IiwidCI6ImZkYzVhNWIwLTYzM2QtNDQ2Ny05N2Q4LTE0ZjBlMzE4NDkwMCJ9&embedImagePlaceholder=true"
+        allowfullscreen="true"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <p class="links">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNWU1YTFlMjgtOTYzZS00NDQ5LWE4NDgtZjkxMmI2YTkxODM4IiwidCI6ImZkYzVhNWIwLTYzM2QtNDQ2Ny05N2Q4LTE0ZjBlMzE4NDkwMCJ9" target="_blank" rel="noopener">Open the report in a new tab</a>
+    <a href="./README.md">Read the case study</a>
+  </p>
+  <p class="note">The report runs on synthetic data: employees, departments, clock-in / clock-out events and leave records are generated for the portfolio. Use the date and month slicers and the buttons inside the report to switch the view, and the button on Daily to open the &ldquo;Why is the hours balance off?&rdquo; drill-down page. For the best view, open the report in a new tab or use the full-screen button at the bottom right of the report.</p>
+</main>
+</body>
+</html>
