@@ -2,6 +2,8 @@
 
 An interactive Power BI report that turns raw clock-in / clock-out records from a legacy time-tracking system into an answer to one question: **is the team where the schedule says it should be, and if not, why?**
 
+[![Workforce Analytics: the Daily page, clock-in and clock-out deviations, who is away and the gap to plan](screenshots/01-wf-daily.gif)](https://olga-bi-ba.github.io/Power-BI-portfolio/projects/workforce-analytics/report.html)
+
 > **Tech Stack:** Power BI Desktop/Service, Power Query (M), DAX, Deneb (Vega-Lite), SharePoint, Claude Code with the Power BI Modeling MCP.
 
 > **▶ Interactive report:** [open the live Power BI report](https://app.powerbi.com/view?r=eyJrIjoiNWU1YTFlMjgtOTYzZS00NDQ5LWE4NDgtZjkxMmI2YTkxODM4IiwidCI6ImZkYzVhNWIwLTYzM2QtNDQ2Ny05N2Q4LTE0ZjBlMzE4NDkwMCJ9) (or the [embedded page](report.html)). The data is synthetic, see the note below.
@@ -129,7 +131,7 @@ flowchart LR
 
 > Technical Features: Dynamic (DAX) insight titles, Conditional Formatting, Bookmarks & Buttons, Cross Filtering, Custom background with transparent visuals
 
-<img width="1504" alt="Daily page" src="img/01-wf-daily.gif" />
+<img width="1504" alt="Daily page" src="screenshots/01-wf-daily.gif" />
 
 **📌 Reading example (8 July 2025).** The working-hours balance is **`-39.3 h`**: 589 of 629 planned hours worked, **94%** of the plan so far. In the deviation table Indiana Jones is **`+26 min`** late and Forrest Gump **`+16 min`**; Olga Sasinovich left **`13 min`** early. Two people are on vacation and one is absent without a reason (James Bond).
 
@@ -161,7 +163,7 @@ flowchart LR
 
 > Technical Features: Deneb (Vega-Lite) Calendar, Dynamic Images by URL, Field Parameters, DAX, Conditional Formatting, Dynamic Titles, Slicers
 
-<img width="1504" alt="Employees page" src="img/02-wf-employees.gif" />
+<img width="1504" alt="Employees page" src="screenshots/02-wf-employees.gif" />
 
 **📌 Reading example (Luke Skywalker, September 2025).** The balance is **`-34.3 h`** (170 of 204 planned hours, **83%**) and he ranks **11 of 11** by gap that month. Only **11 of 14** worked days were on time in and out: one late arrival (`15 min`), two early departures (`20 min` in total) and two unexcused absences (2 and 24 September, the red cells). The calendar also shows a sick day on the 1st and a week of vacation on the 8th–12th.
 
@@ -178,7 +180,7 @@ flowchart LR
 
 > Technical Features: Deneb (Vega-Lite) Radar, Field Parameters, Button Slicers, Dynamic Titles, DAX, Conditional Formatting, Tables & Matrices
 
-<img width="1504" alt="Individual Trends page" src="img/03-wf-trends.gif" />
+<img width="1504" alt="Individual Trends page" src="screenshots/03-wf-trends.gif" />
 
 **📌 Reading example (Harry Potter, 2025).** Behind plan in **7 of 12 months**, **`-117 h`** over the year (2,727 of 2,844 planned hours). Most of the loss comes from incomplete records (`96 h`) and unexplained absences (`60 h`); lateness (`11 h`) and early departures (`5 h`) are small. The radar shows `767 min` of early clock-ins against `680 min` of late ones, so punctuality is not the problem; missing records are.
 
@@ -195,7 +197,7 @@ flowchart LR
 
 > Technical Features: Matrix with expandable hierarchy, Conditional Formatting by measure (also on subtotals and totals), Button Slicer, Visual-level filters, DAX
 
-<img width="1504" alt="Summary page" src="img/04-wf-summary.gif" />
+<img width="1504" alt="Summary page" src="screenshots/04-wf-summary.gif" />
 
 **📌 Reading example (all of 2025).** All 11 employees finish below plan, from **`-117 h`** (Harry Potter) to **`-270 h`** (Peter Parker), `-2,070 h` in total. The two warehouse departments alone account for about 38% of it (Panel Materials Warehouse `-396 h`, Warehouse `-387 h`). By cause, incomplete records (`1,172 h`) and unexplained absences (`947 h`) dwarf late arrivals (`84 h`) and early departures (`61 h`); extra hours (`+510 h`) offset a part of the loss. In this synthetic data the issue is attendance records and absences, not punctuality.
 
