@@ -1,23 +1,47 @@
-# Sales-Reports-
-Sales Dashboards based on synthetic dataset (Contoso) 
-
 # Contoso Sales Performance Report 📊
 
 An interactive, enterprise-grade Power BI dashboard designed to monitor key performance indicators (KPIs), product and regional efficiency.
 
 > **Project Status:** Completed 🚀  
-> **Tech Stack:** Power BI Desktop, Power Query (M Language), DAX, Figma, Git LFS.
+> **Tech Stack:** Power BI Desktop, SQL, Power Query (M Language), DAX, Figma, Git LFS.
 
-<TOC>
+## 📑 Contents
+
+- [Business Question](#-business-question-new)
+- [Report Screenshots](#-report-screenshots)
+  - [1. Global Sales Overview](#1-main-page-global-sales-overview)
+  - [2. Regional Trends](#2-regional-trends-page)
+  - [3. Products. What Sells](#3-products-what-sells)
+  - [4. Scenario Analysis](#4-scenario-analysis-page)
+  - [5. Daily Cockpit](#5-daily-cockpit-page)
+- [Interactivity](#-interactivity-new)
+- [Data Model and DAX](#-data-model-and-dax-new)
+- [Data Limitations](#-data-limitations)
+- [Files](#-files)
 
 
   
+> **Note on the data:** Contoso is a synthetic dataset. It is well suited for demonstrating modelling, DAX and dashboard design, but it may not reflect realistic business patterns. The findings below illustrate the analytical approach.
+
+## 🎯 Business Question *(new)*
+
+**Role:** BI analyst preparing a performance review for the CEO, CFO, Commercial Director and regional managers.
+
+**Scenario:** global net revenue is falling. Leadership needs to know *what* is shrinking, *where*, and *what to do about it*. The report is built around four decisions:
+
+1. **Where is revenue lost?** Which regions, channels and categories drive the 2025 decline.
+2. **Where is the money still being made?** Which countries and products grow, and whether they are big enough to matter.
+3. **What to do with the product range?** Which subcategories to protect, harvest, grow or phase out.
+4. **Is a new discount policy worth it?** Under which demand and cost assumptions it adds profit.
+
+A fifth page, the **Daily Cockpit**, supports day-to-day management: is the month on track against its forecast?
+
 ## 📷 Report Screenshots
 
 ### 1. Main Page: Global Sales Overview
 This page serves as the summary of short-term trends for executive management, offering a high-level performance overview across all global markets, sales channels, and product categories.
 
->Technical Features: Field Parameters, DAX, Conditional Formatting, Cross Filtering, Bookmarks & Buttons, Visuals
+>Technical Features: Field Parameters, DAX, Conditional Formatting, Cross Filtering, Bookmarks & Buttons, Visuals, Dynamic RLS (by user email)
 
 <img width="1504" height="843" alt="Animation" src="https://github.com/user-attachments/assets/ebe2197b-f3b8-467c-b6c6-5bc12348b65f" />
 
@@ -116,3 +140,49 @@ The Daily Cockpit serves as an operational executive command center designed for
 <img width="1526" height="854" alt="Page Daily CockPit 5" src="https://github.com/user-attachments/assets/36c281a1-6402-430d-8aba-6f63f49e8691" />
 
 ---
+
+## 🕹️ Interactivity *(new)*
+
+- Cross-filtering between visuals on every page.
+- Field-parameter switches for metric (net revenue, gross profit, active SKUs, YoY growth), view (channel or macro region) and level (category or country).
+- Year buttons and bookmark-driven toggles (Growing / Declining, Trends / Details, Category / Global ABC-XYZ).
+- Dynamic titles and insight text that follow the current selection.
+- What-if sliders on the Scenarios page (discount, demand increase, unit cost).
+- Country cards with dynamic flags loaded by URL.
+
+---
+
+## 🧱 Data Model and DAX *(new)*
+
+- **Data preparation (SQL):** the data was prepared with SQL queries before it was loaded into Power BI.
+- **Dynamic row-level security (RLS):** access is restricted by region and store, based on the signed-in user's email (`Security_Region_RLS`, `Security_Store_RLS`).
+- **Star schema** with a sales fact and a sales-territory (region and country) dimension at its core.
+- **Facts:** `fact Sales`, `fact Inventory`.
+- **Dimensions:** `dim Calendar`, `dim Product`, `dim Store`, `dim SalesTerritory`, `dim Promotion`, `dim Channel`, `dim Currency`, `dim Geo`.
+- **Classification tables:** `XYZ Classification` and `ABC XYZ Classification`; ABC and ABC-XYZ labels are also stored on `dim Product`.
+- **Field parameters and what-if tables:** metric selection, date group, category / country and product level; scenario tables for discount, demand, price and unit cost.
+- **Measures** sit in one `_Measures` table, grouped by purpose:
+  - core metrics (net revenue, gross profit, gross margin, discount depth, units sold, active SKUs);
+  - prior-year and YoY measures (value, %, gain/loss);
+  - shares of revenue and profit, and subcategory share;
+  - monthly forecast and forecast versus prior year;
+  - scenario measures (net revenue, COGS, gross profit, versus fact 2025);
+  - conditional-formatting (`CF …`) and icon (`viz …`) measures;
+  - dynamic titles and insight text.
+- **Techniques:** time intelligence, ABC-XYZ classification, Pareto (cumulative share) analysis, what-if simulation, forecast to month end, visual calculations.
+
+---
+
+## ⚠️ Data Limitations *(new)*
+
+- The dataset is **synthetic**. It does not contain the behaviour needed to estimate a real price elasticity, so the Scenarios page is a deterministic simulation (see the methodology note above).
+- Findings describe 2025 against 2024 unless a page says otherwise. Screenshots with another year selected show different percentages.
+
+---
+
+## 🗂️ Files *(new)*
+
+| Path | Content |
+|---|---|
+| `powerbi/contoso-sales.pbix` | The full report (stored with Git LFS) |
+| `screenshots/` | One animated preview per page |
