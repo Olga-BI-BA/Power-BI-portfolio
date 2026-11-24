@@ -6,7 +6,7 @@ An interactive Power BI report that turns raw clock-in / clock-out records from 
 
 > **Tech Stack:** Power BI Desktop/Service, Power Query (M), DAX, Deneb (Vega-Lite), SharePoint, Claude Code with the Power BI Modeling MCP.
 
-> **▶ Interactive report:** [open the live Power BI report](https://app.powerbi.com/view?r=eyJrIjoiNWU1YTFlMjgtOTYzZS00NDQ5LWE4NDgtZjkxMmI2YTkxODM4IiwidCI6ImZkYzVhNWIwLTYzM2QtNDQ2Ny05N2Q4LTE0ZjBlMzE4NDkwMCJ9) (or the [embedded page](report.html)). The data is synthetic, see the note below.
+> **▶ Interactive report:** [open the live Power BI report](https://app.powerbi.com/view?r=eyJrIjoiNWU1YTFlMjgtOTYzZS00NDQ5LWE4NDgtZjkxMmI2YTkxODM4IiwidCI6ImZkYzVhNWIwLTYzM2QtNDQ2Ny05N2Q4LTE0ZjBlMzE4NDkwMCJ9) . The data is synthetic, see the note below.
 
 > **⚠️ Data note:** this is a **synthetic dataset**. Employees, departments, clock-in / clock-out events and leave records are generated for the portfolio; employees carry names of film characters and their photos are AI-generated. The patterns (lateness, absences, gaps to plan) are artificial and **may not resemble real-life workforce behaviour**. Read the numbers as examples of how to read the report, not as benchmarks.
 
@@ -46,12 +46,12 @@ Try the report itself: [**Open Workforce Analytics in Power BI**](https://app.po
 
 In some businesses output depends directly on people being at their workplace at the agreed time: production lines, warehouses, shift-based operations. Every late arrival, early departure or unexplained absence is a lost working hour, and lost hours turn into missed output, overtime for colleagues and payroll disputes.
 
-The company in this case had the raw material to see it, but not the means:
+The company in this case had:
 
 - **The clock-in / clock-out system is a legacy one.** It records every turnstile event, but data can only leave it as CSV files.
 - **Plan and fact lived in different places.** Schedules, holidays and leave records were kept separately, so nobody could say how many hours *should* have been worked in a month, and how many were.
 - **"We are behind plan" had no explanation.** Managers saw a total, but not whether the gap came from lateness, early leaving, sick leave, unexcused absences or simply a missing clock-in record.
-- **Facts needed** Talking to an employee or a department head about attendance only works when both sides see the same neutral numbers for the same period.
+- **"Facts needed"** Talking to an employee or a department head about attendance only works when both sides see the same neutral numbers for the same period.
 
 The business task: **monitor schedule compliance every day, and be able to explain any deviation from plan down to the person and the day.**
 
@@ -89,7 +89,6 @@ flowchart LR
 ```
 
 - The system's CSV exports are dropped into a **SharePoint (or OneDrive for Business) folder**. Power BI reads the folder with the SharePoint connector in Power Query, so new files are picked up on refresh and nobody has to touch the report.
-- Because SharePoint Online is a cloud source, **scheduled refresh in the Power BI Service works without an on-premises gateway**.
 - HR inputs (work schedules, holidays, leave) come from a simple Excel workbook that HR can edit themselves; the model turns them into a daily plan.
 - Cleaning happens in Power Query: delimiters and encodings, types, system glitch events filtered out, and the delay in minutes calculated against the schedule.
 - *In this portfolio copy the same files are generated synthetic data and are read from a local folder; only the source step of the queries differs.*
@@ -144,7 +143,7 @@ flowchart LR
 ### 1b. Why is the hours balance off?
 **What it shows.** An explanation of the gap behind the Daily KPI: the hours bridge from planned to actual hours, the cumulative gap by department (waterfall), the gap by day or week, and a table of lost hours per employee with every cause in its own column.
 
-**Value.** It turns *"we are behind plan"* into *"where, when, who and why"*, so the next action is clear: fix attendance records, talk to a department head, review absences. The page is hidden from the tab strip and opens only from the button on Daily (shown at the end of the animation above).
+**Value.** It turns *"we are behind plan"* into *"where, when, who and why"*, so the next actions are to fix attendance records, talk to a department head, review absences. The page is hidden from the tab strip and opens only from the button on Daily (shown at the end of the animation above).
 
 > Technical Features: Waterfall Charts, Dynamic Titles, Visual Interactions, Conditional Formatting, Hidden page navigation
 
@@ -157,7 +156,7 @@ flowchart LR
 <a id="employees"></a>
 
 ### 2. Employees
-**What it shows.** One employee and one month: a profile card (photo, department and division, rank by gap, planned and worked days), the working-hours balance with plan completion and the number of non-compliant days, lost hours by cause, average lateness and early leaving in minutes, an **attendance calendar** (each day is split into clock-in and clock-out halves; absences are coloured cells) and the hours gap by day or week.
+**What it shows.** One employee and one month: a profile card, the working-hours balance with plan completion and the number of non-compliant days, lost hours by cause, average lateness and early leaving in minutes, an **attendance calendar** (absences are coloured cells) and the hours gap by day or week.
 
 **Value.** Preparation for a one-to-one or a performance review: *Is the gap caused by lateness, early leaving, unexcused absences or missing records? Is it a pattern or a single bad week?*
 
@@ -191,7 +190,7 @@ flowchart LR
 <a id="summary"></a>
 
 ### 4. Summary
-**What it shows.** All employees in one matrix: rows are employees, and the **+** icon expands an employee into days. Columns bring together almost everything from the other pages (plan, actual, gap, hours versus plan, schedule compliance, lost hours by cause, days by type, minutes of early and late clock-ins and clock-outs). Month buttons choose the time frame. Problem columns turn red when above zero; the gap is red or green.
+**What it shows.** All employees in one matrix: rows are employees, and the **+** icon expands an employee into days. Columns bring together almost everything from the other pages. Month buttons choose the time frame. Problem columns turn red when above zero; the gap is red or green.
 
 **Value.** One table for HR and payroll review: compare people side by side for any period, then open a person and find the exact days behind the number.
 
@@ -223,9 +222,7 @@ A star schema built in Power BI (TMDL).
 **Modelling decisions**
 - **Five-minute rule** in a calculated column (`Vtype`): each event is *early*, *on time* or *late* for clock-in and clock-out. All lateness measures read from it, so the rule lives in one place.
 - **`Selected date`** measure drives every month-to-date number; with nothing picked it falls back to the last date that has data.
-- **Hours bridge** measures split the gap into causes; *Other (net)* is the residual so that the bridge always closes.
 - **Insight titles are DAX measures** (the biggest driver, department or employee is calculated, not typed), with singular/plural handling and a "No data for the selection" fallback.
-- **Clean model:** unused measures and tolerance parameter tables removed, auto date/time off, a dedicated date table, a report-level filter that excludes system glitch events.
 
 [↑ Back to contents](#contents)
 
@@ -238,9 +235,9 @@ A star schema built in Power BI (TMDL).
 | Area | Tools |
 |---|---|
 | **BI & modelling** | Power BI Desktop, PBIP project format (PBIR report + TMDL semantic model), Power Query (M) for CSV and Excel sources, DAX (measures, calculated tables and columns, field parameters) |
-| **Data source** | CSV exports from a legacy time-tracking system, SharePoint / OneDrive for Business folder, SharePoint connector in Power Query |
-| **Custom visuals** | Deneb (Vega-Lite) for the attendance calendar and the punctuality radar |
-| **Data generation** | Python scripts for the synthetic employees, clock-in / clock-out events and leave records; AI image generator for employee portraits; Pillow for cropping and resizing |
+| **Data source** | CSV exports from a legacy time-tracking system, SharePoint / OneDrive, SharePoint connector |
+| **Custom visuals** | Deneb (Vega-Lite) |
+| **Data generation** | Python scripts for the synthetic employees, clock-in / clock-out events and leave records; AI image generator for employee portraits|
 | **Quality checks** | JSON-schema validation of the PBIR files, DAX queries against the model to verify measures |
 | **AI-assisted development** | Claude Code with the Power BI Modeling MCP (model edits and DAX checks) |
 | **Delivery** | Git and GitHub for version control, Power BI Service for publishing |
