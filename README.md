@@ -21,10 +21,15 @@ Welcome to my interactive data visualization and business intelligence portfolio
 * **Tech Stack:** Power BI, DAX, Power Query, Star Schema.
 * **Key Visuals:** [Overview Preview](assets/previews/contoso-overview.png) | [Deep Dive Walkthrough](projects/contoso-sales/README.md)
 
-### 3. 📦 Workforce Analytics (HR)
-* **Objective:** Analyze employee turnover, recruitment metrics, and team performance.
-* **Tech Stack:** Power BI, Advanced DAX.
-* **Key Visuals:** [Project Folder](projects/workforce-analytics/)
+### 3.  👥 Workforce Analytics (HR): Attendance & Schedule Compliance
+<a href="https://olga-bi-ba.github.io/Power-BI-portfolio/projects/workforce-analytics/report.html"><img src="projects/workforce-analytics/screenshots/00-wf-cover.png" alt="Workforce Analytics report cover" width="45%" align="left"></a>
+
+* **Objective:** Show daily whether a team is on schedule and explain every deviation, down to the person and the day, for a business that depends on people being at their workplace on time. 
+
+* **Tech Stack:** Power BI (PBIP), Power Query, DAX, SharePoint, Deneb (Vega-Lite).
+* **Key Visuals:** [▶ Interactive Report](https://olga-bi-ba.github.io/Power-BI-portfolio/projects/workforce-analytics/report.html) | [Deep Walkthrough](projects/workforce-analytics/README.md)
+
+<br clear="left">
 
 ### 4. ☕ Sunrise Coffee Commercial Performance Review (2023–2024)
 <a href="projects/sunrise-coffee-performance/README.md"><img src="projects/sunrise-coffee-performance/screenshots/00-sunrise-coffee-cover.png" alt="Sunrise Coffee report cover" width="45%" align="left"></a>
