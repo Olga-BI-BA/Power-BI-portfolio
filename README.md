@@ -17,7 +17,7 @@ Welcome to my interactive data visualization and business intelligence portfolio
 <br clear="left">
 
 ### 2. 🛍️ Contoso Sales Performance Analysis
-<a href="projects/contoso-sales/README.md"><img src="projects/contoso-sales/screenshots/03-products.gif" alt="Contoso Sales report: Products page" width="45%" align="left"></a>
+<a href="projects/contoso-sales/README.md"><img src="projects/contoso-sales/screenshots/03-products.gif" alt="Contoso Sales report: Products page" width="45%" align="left" hspace="25"></a>
 
 * **Objective:** Find where global revenue is lost and where it still grows, and decide what to do with the product range. The report covers five pages for executives and regional managers: overview, regional trends, product analysis (BCG and ABC-XYZ), a discount scenario simulator and a daily cockpit.
 
