@@ -9,21 +9,21 @@ Welcome to my interactive data visualization and business intelligence portfolio
 ### 1. 📱 CEO Daily Overview: Mobile Power BI Report
 <a href="https://olga-bi-ba.github.io/Power-BI-portfolio/projects/ceo-daily-overview-mobile/"><img src="projects/ceo-daily-overview-mobile/cover.png" alt="CEO Daily Overview mobile report cover" width="45%" align="left"></a>
 
-* **Objective:** Give a CEO who is always on the move a one-minute morning briefing on his phone: day, week, month and year against last year, with a monthly forecast and a department view.
-* **Tech Stack:** Power BI (PBIP), DAX, Deneb (Vega-Lite), Mobile Layout.
+  * **Objective:** Give a CEO who is always on the move a one-minute morning briefing on his phone: day, week, month and year against last year, with a monthly forecast and a department view.
+  * **Tech Stack:** Power BI, DAX, Deneb (Vega-Lite), Mobile Layout.
   
-* **Key Visuals:** [▶ Interactive Report](https://olga-bi-ba.github.io/Power-BI-portfolio/projects/ceo-daily-overview-mobile/) | [Project Details](projects/ceo-daily-overview-mobile/README.md)
+  * **Key Visuals:** [▶ Interactive Report](https://olga-bi-ba.github.io/Power-BI-portfolio/projects/ceo-daily-overview-mobile/) | [Project Details](projects/ceo-daily-overview-mobile/README.md)
 
 <br clear="left">
 
 ### 2. 🛍️ Contoso Sales Performance Analysis
-<a href="projects/contoso-sales/README.md"><img src="projects/contoso-sales/screenshots/03-products.gif" alt="Contoso Sales report: Products page" width="45%" align="left" hspace="15"></a>
+<a href="projects/contoso-sales/README.md"><img src="projects/contoso-sales/screenshots/03-products.gif" alt="Contoso Sales report: Products page" width="45%" align="left" hspace="0"></a>
 
-• **Objective:** Find where global revenue is lost and where it still grows, and decide what to do with the product range. The report covers five pages for executives and regional managers: overview, regional trends, product analysis (BCG and ABC-XYZ), a discount scenario simulator and a daily cockpit.
+  • **Objective:** Find where global revenue is lost and where it still grows, and decide what to do with the product range. The report covers five pages for executives and regional managers: overview, regional trends, product analysis (BCG and ABC-XYZ), a discount scenario simulator and a daily cockpit.
 
-• **Tech Stack:** Power BI (PBIX), SQL, Power Query, DAX, Star Schema, Field Parameters, What-If Parameters, Dynamic RLS.
+  • **Tech Stack:** Power BI, SQL, Power Query, DAX, Star Schema, Field Parameters, What-If Parameters, Dynamic RLS.
 
-• **Key Visuals:** [Project Details](projects/contoso-sales/README.md)
+  • **Key Visuals:** [Project Details](projects/contoso-sales/README.md)
 
 <br clear="left">
 
